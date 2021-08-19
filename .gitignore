@@ -1,0 +1,9 @@
+data/*
+model/*
+
+*ans
+backyard
+
+__pycache__
+ipynb_checkpoints
+.DS_Store
