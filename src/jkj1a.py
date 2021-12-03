@@ -10,8 +10,7 @@ from torchvision.datasets import FashionMNIST
 from torch.utils.data import random_split, DataLoader, Subset, Dataset
 import numpy as np
 
-def load_data(batch_size=4, metric='beauty'):  # metric is 'beauty' or 'pleasure'
-    img_size = 32
+def load_data(batch_size=4, metric='beauty', img_size=32):  # metric is 'beauty' or 'pleasure'
 
     # 画像への前処理
     transform = transforms.Compose(
