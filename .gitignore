@@ -1,9 +1,9 @@
 data/*
-model/*
-misc/*
+models/*
 
 *ans
 backyard
+misc
 
 __pycache__
 ipynb_checkpoints
