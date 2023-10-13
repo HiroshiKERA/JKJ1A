@@ -13,9 +13,10 @@ def set_args():
     のように，--NAME_OF_HYPTER_PARAMETERS を用いて学習性っていを調整できるようにするためのもの．
     '''
     parser = argparse.ArgumentParser(description='')
+    parser.add_argument('--model_name', type=str, default='LeNet')
     parser.add_argument('--batch_size', type=int, default=256)
     parser.add_argument('--nepochs', type=int, default=10)
-    parser.add_argument('--lr', type=float, default=0.01)
+    parser.add_argument('--learning_rate', type=float, default=0.01)
     parser.add_argument('--env_name', type=str, default='')
     args = parser.parse_args()
     return vars(args)
