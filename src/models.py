@@ -47,13 +47,13 @@ class MLP(nn.Module):
         
         self.input_layer = nn.Linear(28*28, self.width)  # 入力28*28次元, 出力128次元
         for i in range(depth):
-            layer = nn.nn.Linear(self.width, self.width)
+            layer = nn.Linear(self.width, self.width)
             self.hidden_layers.append(layer)
         self.output_layer = nn.Linear(self.width, 10)
  
     def forward(self, x):
         x = x.view(-1, 28*28)  # 28 x 28の画像を 28*28のベクトルにする
-        x = F.rule(self.input_layer(x))
+        x = F.relu(self.input_layer(x))
         for hlayer in self.hidden_layers:
             x = F.rele(hlayer(x))
         x = self.output_layer(x)
