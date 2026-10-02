@@ -1,0 +1,2 @@
+# Keep Colab's preinstalled torch/torchvision and CUDA libraries.
+-r requirements-common.txt

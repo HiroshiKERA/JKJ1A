@@ -1,0 +1,116 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[whole]{bxcjkjatype}
+
+% Load necessary packages and definitions.
+\input{prologue.tex}
+
+% 空行で区切った段落は字下げせず、段落間に余白を入れる。
+\usepackage[skip=0.5\baselineskip,indent=0pt]{parskip}
+
+% 自動生成される見出しを日本語にする
+\renewcommand{\refname}{参考文献}
+\renewcommand{\abstractname}{概要}
+\renewcommand{\appendixname}{補遺}
+
+\usepackage{subcaption}
+\usepackage{graphicx,wrapfig,lipsum}
+\usepackage[
+singlelinecheck=false % <-- important
+]{caption}
+\captionsetup[table]{
+  indention=0em
+}
+\usepackage{makecell}
+\usepackage{physics}
+\usepackage{bm} 
+\usepackage{ifthen}
+
+\newcommand{\needspacing}{0}  % 1 or 0
+\newcommand\cnewpage[1]{\ifthenelse{\equal{#1}{1}}{\newpage}}
+
+% \usepackage[linesnumbered, ruled, vlined]{algorithm2e}
+% \SetKwInput{KwInput}{Input}                % Set the Input
+% \SetKwInput{KwOutput}{Output}              % set the Output
+
+\begin{document}
+
+\title{情報工学実験1Aレポートテンプレート}
+
+% 氏名・学籍番号と貢献は例です。班員全員の情報・実際の分担に置き換えてください。
+% 著者名に付ける脚注には\thanksを使います。
+\author{
+    山田\ ちいかわ\thanks{山田は\cref{sec:function-learning}（関数の学習）の実験・執筆を行なった．}\\{\small 26T0001}
+    \and
+    佐藤\ はちわれ\thanks{佐藤は\cref{sec:adversarial-inputs}（画像分類モデルを誤らせる入力）の実験・執筆を行なった．}\\{\small 26T0002}
+    \and
+    高橋\ うさぎ\thanks{高橋は両実験の結果の可視化，\cref{sec:background}（背景知識）・\cref{sec:introduction}（序論）・\cref{sec:conclusion}（結論）の執筆と原稿全体の推敲を行なった．}\hspace{0.6em}\thanks{著者全員の議論を通して\cref{sec:adversarial-inputs}（画像分類モデルを誤らせる入力）の入力設計のアイディア出しを行なった．，}\\{\small 26T0003}
+}
+\date{\number\year 年\number\month 月\number\day 日}
+
+\maketitle
+
+\begin{abstract}
+（ここにはレポートの概要を書く．10--20行くらいが想定で，目的・実行内容・結果など，レポートの全体像がわかるようにする．）
+\LaTeXでレポートを書くためのテンプレート．数式や図表の入れ方やテーブル等，\LaTeX のコマンドに関してAIを積極的に活用すること．実験によって表紙の指定がある場合は，このレポートのPDFファイルと表紙のPDFを結合すれば良い（無理に\LaTeXで表紙を作成すると結構大変）．本実験では追加の表紙は不要．レポートの書き方のスライド等もよく確認すること．以下に書かれているタイトル・内容は全て例なので適宜改変すること．
+\end{abstract}
+
+% 提出要件：本文8ページ（この1ページ目を含む）＋補足1ページ＋参考文献・補遺（ページ数無制限）。
+% 本文の分量は執筆して調整してください。空白ページやページ番号の変更では調整しません。
+% 追加の表紙は不要です。評価は本文8ページを主とします。
+
+\section{序論}\label{sec:introduction}
+本レポートは，ニューラルネットワークによる関数の学習と，画像分類モデルが誤る入力について検討する．
+
+序論では概要をもう少し膨らませたものを書く．このレポートの背景（$\ne$「機械学習を経験する」などの授業の目的），このレポートの目的，実行内容，結果・結論など．1ページ弱が想定．
+
+\section{背景知識}\label{sec:background}
+レポートを読む上で必要になる用語や知識を必要最小限まとめる．このレポートの想定読者はこの実験を行う前の自分など（機械学習などは知らない想定）．
+
+\section{関数の学習}\label{sec:function-learning}
+目的，実験方法，結果，考察を述べる．節のタイトルは実験内容に合わせて変更する．
+
+\section{画像分類モデルを誤らせる入力}\label{sec:adversarial-inputs}
+目的，実験方法，結果，考察を述べる．節のタイトルは実験内容に合わせて変更する．
+
+\section{結論}\label{sec:conclusion}
+改めてこのレポート全体のまとめを述べる．目的に対して何がわかったか，結論と残された課題を明確にする．
+
+% 本文はここまでで8ページに収める。
+\clearpage
+（この補足は1ページにまとめる．AI使用の有無・内容，および班員全員の感想・コメントを記載する．感想・コメントの内容は成績に影響しない．）
+
+\subsection*{AI使用の有無・内容}
+AI使用の有無を記載する．使用した場合は，ツール・モデル名，使用した作業や箇所，使用内容，出力の確認・修正方法を具体的に書く．使用しなかった場合は，その旨を書く．
+
+\subsection*{班員それぞれの感想・コメント}
+\paragraph{山田 ちいかわ．}本人の感想・コメントを書く．
+\paragraph{佐藤 はちわれ．}本人の感想・コメントを書く．
+\paragraph{高橋 うさぎ．}本人の感想・コメントを書く．
+
+% 補足の次のページから参考文献・補遺を置く。ページ数は無制限。
+\clearpage
+\bibliographystyle{apalike}
+% \bibliography{bibliography}  % BiBTeXの使い方がわかるならこれを使う．わからないなら以下．
+\begin{thebibliography}{}
+
+\bibitem[Vaswani et~al., 2017]{vaswani2017attention}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N., Kaiser, {\L}., and Polosukhin, I. (2017).
+\newblock Attention is all you need.
+\newblock In {\em Proceedings of the 31st International Conference on Neural Information Processing Systems}, NIPS'17, page 6000–6010, Red Hook, NY, USA. Curran Associates Inc.
+\end{thebibliography}
+
+
+
+\clearpage
+\appendix
+\renewcommand{\thesection}{補遺\Alph{section}}
+\section{追加の実験結果・資料}
+本文に入れる必要はないが，何かの補完・補足として追加するべき事項はここに載せる．例えば，
+\begin{itemize}
+    \item 機械学習の入門的な事項の網羅的なまとめ
+    \item やったはいいが本文に載せるには微妙or過剰な実験結果
+\end{itemize}
+など．
+
+\end{document}

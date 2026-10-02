@@ -1,0 +1,369 @@
+%%%%%%%%%%%%%%%%%%%%%%%% NIPS package imports. %%%%%%%
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+% \usepackage[colorlinks,urlcolor=cyan,citecolor=blue,linkcolor=magenta]{hyperref}
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{microtype}      % microtypography
+
+\usepackage{nicefrac} 
+\usepackage{subcaption}
+\captionsetup[subfigure]{font=footnotesize,
+              labelfont=up,
+              %%singlelinecheck=false,
+              %%format=hang,
+              justification=centering % <-- new
+             }
+
+%%%%%%%%%%%%%%%%%%%%%%%% Custom imports. %%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{thmtools,thm-restate}
+\usepackage{thm-restate}
+\usepackage{paralist}
+\usepackage{comment}
+\usepackage{dsfont}
+%\usepackage{natbib}
+
+\usepackage{bbm}
+\usepackage{float}
+\usepackage{balance}
+\usepackage{stmaryrd}
+
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{mathtools}
+\usepackage{mdframed}
+
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% captions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%Francy algorithm coloring  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[ruled, linesnumbered]{algorithm2e} %
+\usepackage{xcolor} % 
+\usepackage{tikz}
+\usetikzlibrary{fit,calc}
+%define a marking command
+\newcommand*{\tikzmk}[1]{\tikz[remember picture,overlay,] \node (#1) {};\ignorespaces}
+%define a boxing command, argument = colour of box
+\newcommand{\boxit}[1]{\tikz[remember picture,overlay]{\node[yshift=3pt,fill=#1,opacity=.25,fit={(A)($(B)+(.90\linewidth,.8\baselineskip)$)}] {};}\ignorespaces}
+
+\newcommand{\boxitshort}[1]{\tikz[remember picture,overlay]{\node[yshift=3pt,fill=#1,opacity=.25,fit={(C)($(D)+(.87\linewidth,.8\baselineskip)$)}] {};}\ignorespaces}
+
+%define some colours according to algorithm parts (or any other method you like)
+\colorlet{pink}{red!40}
+\colorlet{lightblue}{blue!30}
+\colorlet{lightgreen}{green!30}
+
+%Change the separation between the columns in the matrix.
+\setlength\arraycolsep{2pt}
+
+%This is so that the algorithm does not contain a semicolon in algorithm2e
+\DontPrintSemicolon
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{natbib}
+\setcitestyle{authoryear,round,citesep={;},aysep={,},yysep={;}}
+\renewcommand{\cite}[1]{\citep{#1}}
+\newcommand{\redTodo}[1]{\textcolor{red}{[#1]}}
+\newcommand{\CS}[1]{\textcolor{pink}{#1}}
+%\newcommand{\CS}[1]{#1}
+
+\usepackage[vvarbb]{newtxmath}
+
+
+%%%%%%%%%%%%%%%%%%%%%%% constants %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\fwt{{S}}
+\def\db{{D}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Algos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\agd{{\textnormal{\texttt{AGD}}}}
+\def\abm{{\textnormal{\texttt{ABM}}}}
+\def\bbabm{{\textnormal{\texttt{BB-ABM}}}}
+\def\afw{{\textnormal{\texttt{AFW}}}}
+\def\agdavi{{\textnormal{\texttt{AGDAVI}}}}
+\def\avi{{\textnormal{\texttt{AVI}}}}
+\def\bpfw{{\textnormal{\texttt{BPFW}}}}
+\def\cgavi{{\textnormal{\texttt{CGAVI}}}}
+\def\cg{{\textnormal{\texttt{CG}}}}
+\def\fw{{\textnormal{\texttt{FW}}}}
+\def\ihb{{\textnormal{\texttt{IHB}}}}
+\def\ihb{{\textnormal{\texttt{IHB}}}}
+\def\oavi{{\textnormal{\texttt{OAVI}}}}
+\def\vca{{\textnormal{\texttt{VCA}}}}
+\def\pfw{{\textnormal{\texttt{PFW}}}}
+\def\svd{{\textnormal{\texttt{SVD}}}}
+\def\svm{{\textnormal{\texttt{SVM}}}}
+\def\cvxoracle{{\textnormal{\texttt{ORACLE}}}}
+\def\wihb{{\textnormal{\texttt{WIHB}}}}
+
+
+
+\def\pcg{{\textnormal{\texttt{PCG}}}}
+\def\bpcg{{\textnormal{\texttt{BPCG}}}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% Math Operators %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%% Vectors %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\aa{{\mathbf{a}}}
+\def\bb{{\mathbf{b}}}
+\def\cc{{\mathbf{c}}}
+\def\dd{{\mathbf{d}}}
+\def\ee{{\mathbf{e}}}
+\def\ff{{\mathbf{f}}}
+\def\gg{{\mathbf{g}}}
+\def\hh{{\mathbf{h}}}
+\def\nn{{\mathbf{n}}}
+\def\rr{{\mathbf{r}}}
+\def\ss{{\mathbf{s}}}
+\def\tt{{\mathbf{t}}}
+\def\uu{{\mathbf{u}}}
+\def\vv{{\mathbf{v}}}
+\def\ww{{\mathbf{w}}}
+\def\xx{{\mathbf{x}}}
+\def\yy{{\mathbf{y}}}
+\def\zz{{\mathbf{z}}}
+
+
+
+\def\aalpha{\boldsymbol{\alpha}}
+\def\bbeta{\boldsymbol{\beta}}
+\def\ssig{{\boldsymbol{\sigma}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Vectors -- Caps %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\AA{{\mathbf{A}}}
+\def\BB{{\mathbf{B}}}
+\def\CC{{\mathbf{C}}}
+\def\DD{{\mathbf{D}}}
+\def\EE{{\mathbf{E}}}
+\def\FF{{\mathbf{F}}}
+\def\GG{{\mathbf{G}}}
+\def\HH{{\mathbf{H}}}
+\def\MM{{\mathbf{M}}}
+\def\RR{{\mathbf{R}}}
+\def\SS{{\mathbf{S}}}
+\def\TT{{\mathbf{T}}}
+\def\UU{{\mathbf{U}}}
+\def\VV{{\mathbf{V}}}
+\def\XX{{\mathbf{X}}}
+\def\YY{{\mathbf{Y}}}
+\def\ZZ{{\mathbf{Z}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Caps: Bold %%%%%%%%%%%%%%%%%%%%%%%% 
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\renewcommand{\H}{\mathbb{H}}
+% \renewcommand{\K}{\mathbb{K}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathbb{T}}
+
+\newcommand{\TP}{\mathbb{TP}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Z}{\mathbb{Z}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% caps: Calligraphy %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\cA{{\ensuremath{\mathcal{A}}}\xspace}
+\newcommand\cB{{\ensuremath{\mathcal{B}}}\xspace}
+\newcommand\cC{{\ensuremath{\mathcal{C}}}\xspace}
+\newcommand\cD{{\ensuremath{\mathcal{D}}}\xspace}
+\newcommand\cE{{\ensuremath{\mathcal{E}}}\xspace}
+\newcommand\cF{{\ensuremath{\mathcal{F}}}\xspace}
+\newcommand\cG{{\ensuremath{\mathcal{G}}}\xspace}
+\newcommand\cH{{\ensuremath{\mathcal{H}}}\xspace}
+\newcommand\cI{{\ensuremath{\mathcal{I}}}\xspace}
+\newcommand\cJ{{\ensuremath{\mathcal{J}}}\xspace}
+\newcommand\cK{{\ensuremath{\mathcal{K}}}\xspace}
+\newcommand\cL{{\ensuremath{\mathcal{L}}}\xspace}
+\newcommand\cM{{\ensuremath{\mathcal{M}}}\xspace}
+\newcommand\cN{{\ensuremath{\mathcal{N}}}\xspace}
+\newcommand\cO{{\ensuremath{\mathcal{O}}}\xspace}
+\newcommand\cP{{\ensuremath{\mathcal{P}}}\xspace}
+\newcommand\cQ{{\ensuremath{\mathcal{Q}}}\xspace}
+\newcommand\cR{{\ensuremath{\mathcal{R}}}\xspace}
+\newcommand\cS{{\ensuremath{\mathcal{S}}}\xspace}
+\newcommand\cT{{\ensuremath{\mathcal{T}}}\xspace}
+\newcommand\cU{{\ensuremath{\mathcal{U}}}\xspace}
+\newcommand\cV{{\ensuremath{\mathcal{V}}}\xspace}
+\newcommand\cW{{\ensuremath{\mathcal{W}}}\xspace}
+\newcommand\cX{{\ensuremath{\mathcal{X}}}\xspace}
+\newcommand\cY{{\ensuremath{\mathcal{Y}}}\xspace}
+\newcommand\cZ{{\ensuremath{\mathcal{Z}}}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Greek %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\eps}{\epsilon}
+\newcommand{\sig}{\sigma}
+\newcommand{\Sig}{\Sigma}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Custom %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareMathOperator{\vertices}{vert}
+\DeclareMathOperator{\face}{face}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\faces}{faces}
+\DeclareMathOperator{\acc}{acc}
+\DeclareMathOperator{\apker}{apker}
+\DeclareMathOperator{\aponb}{APONB}
+\DeclareMathOperator{\argmax}{argmax}
+\DeclareMathOperator{\argmin}{argmin}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\eval}{eval}
+\DeclareMathOperator{\evaluation}{EV}
+\DeclareMathOperator{\gr}{g}
+\DeclareMathOperator{\gw}{gw}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\lmo}{LMO}
+\DeclareMathOperator{\lt}{LT}
+\DeclareMathOperator{\ltc}{LTC}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\mse}{MSE}
+% \DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\rmse}{rmse}
+\DeclareMathOperator{\mathspan}{span}
+\DeclareMathOperator{\spar}{SPAR}
+\DeclareMathOperator{\srref}{SRREF}
+
+
+
+\newcommand{\zeros}{\ensuremath{\mathbf{0}}}
+\newcommand{\ones}{\mathbf{1}}
+\newcommand{\oneterm}{\ensuremath{\mathbb{1}}}
+
+\newcommand{\true}{\operatorname{true}}
+\newcommand{\false}{\operatorname{false}}
+
+\newcommand{\innp}[1]{\left\langle #1 \right\rangle}
+\newcommand{\bdot}[1]{\mathbf{\dot{ #1 }}}
+\newcommand{\OPT}{\operatorname{OPT}}
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+
+% et. al.
+\newcommand{\etal}{\textit{et al}.}
+
+% :=
+\newcommand{\defeq}{\stackrel{\mathrm{\scriptscriptstyle def}}{=}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Lines %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*{\sepfbox}[1]{%
+  \begingroup
+    \sbox0{\fbox{#1}}%
+    \setlength{\fboxrule}{0pt}%
+    \fbox{\unhbox0}%
+  \endgroup
+}
+\newcommand*{\vsepfbox}[1]{%
+  \begingroup
+    \sbox0{\fbox{#1}}%
+    \setlength{\fboxrule}{0pt}%
+    \mbox{\kern-\fboxsep\fbox{\unhbox0}\kern-\fboxsep}%
+  \endgroup
+}
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+\newenvironment{nscenter}
+ {\parskip=0pt\par\nopagebreak\centering}
+ {\par\noindent\ignorespacesafterend}
+
+%%%%%%%%%%%%%%%% Theorem setup. %%%%%%%%%%%%%%
+\theoremstyle{plain} \numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\numberwithin{theorem}{section}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{propoblem}[theorem]{Problem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{finalremark}[theorem]{Final Remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{maintheorem}[theorem]{Main Theorem}
+
+\theoremstyle{plain}
+\newtheorem{assumption}{Assumption}
+\let\origtheassumption\theassumption
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% Miscelaneous %%%%%%%
+\graphicspath{{imgs/}}
+\makeatletter
+\def\mathcolor#1#{\@mathcolor{#1}}
+\def\@mathcolor#1#2#3{%
+  \protect\leavevmode
+  \begingroup
+    \color#1{#2}#3%
+  \endgroup
+}
+\makeatother
+\setlength{\parskip}{0.75em}
+
+%%%% Sebastian's macros
+\newcommand{\tk}{{\color{red}{\bf tk}}}
+
+%HERE
+\iffalse
+
+%For one liner if else statements.
+\algnewcommand{\IfThenElse}[3]{% \IfThenElse{<if>}{<then>}{<else>}
+  \State \algorithmicif\ #1\ \algorithmicthen\ #2\ \algorithmicelse\ #3}
+
+%Redefine left and right.
+\let\originalleft\left
+\let\originalright\right
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\renewcommand{\right}{\aftergroup\egroup\originalright}
+
+\fi
+
+%For computer font.
+\newenvironment{myfont}{\fontfamily{<familyname>}\selectfont}{\par}
+
+%Adding the lines in the algorithm between input and output.
+\newcommand{\hrulealg}[0]{\vspace{1mm} \hrule \vspace{1mm}}
+
+\usepackage[colorlinks,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+
+% 節参照を「第3節」の形式で表示する。
+\usepackage{cleveref}
+\crefformat{section}{第#2#1#3節}
+\Crefformat{section}{第#2#1#3節}
+
+\endinput

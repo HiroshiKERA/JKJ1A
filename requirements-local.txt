@@ -1,0 +1,4 @@
+# A matching torch/torchvision pair; use CPU for the local Day 1 exercises.
+torch==2.7.1
+torchvision==0.22.1
+-r requirements-common.txt

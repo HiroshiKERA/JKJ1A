@@ -1,0 +1,15 @@
+# Notebook / plotting / the small Day 1 dataset
+numpy>=1.26,<3
+matplotlib>=3.9,<4
+scikit-learn>=1.5,<2
+ipywidgets>=8.1,<9
+ipykernel>=6.29,<7
+# Hugging Face model loading (no model weights are downloaded at installation)
+transformers>=4.54,<5
+huggingface-hub>=0.34,<1
+accelerate>=1,<2
+safetensors>=0.4,<1
+Pillow>=10,<13
+
+# ImageNet pretrained classifiers for Day 2
+timm>=1.0.19,<2

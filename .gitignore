@@ -1,10 +1,13 @@
-data/*
-models/*
+# Datasets, weights and generated outputs
+data/
+models/
+results/
+artifacts/
 
-*ans
-backyard
-misc
-
-__pycache__
-ipynb_checkpoints
+# Local Python environments and caches
+.venv/
+.env
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
 .DS_Store
