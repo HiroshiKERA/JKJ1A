@@ -61,9 +61,9 @@ def show_relu_fit_exercise(n_hiddens=4, target="triangle"):
         target_y = np.sin(x)
         target_title = "sin(x), 0 ≤ x ≤ π"
     elif target == "linear":
-        x = np.linspace(0, 2.5, 600)
+        x = np.linspace(-1.5, 2.5, 600)
         target_y = x
-        target_title = "y = x, 0 ≤ x ≤ 2.5"
+        target_title = "y = x, -1.5 ≤ x ≤ 2.5"
     else:
         x = np.linspace(-1.5, 2.5, 600)
 
