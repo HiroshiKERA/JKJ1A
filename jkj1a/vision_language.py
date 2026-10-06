@@ -73,6 +73,25 @@ class MiniVLM:
 
 def save_observation(vlm, image, question, answer, *, name, expected, condition,
                      directory='results/day2-vlm', max_new_tokens=64):
+    """入力画像とVLMの回答・実行条件を、PNGとJSONに保存する。
+
+    Args:
+        vlm: 使用したMiniVLM。モデル名とリビジョンを記録する。
+        image: 保存するPIL画像。
+        question: モデルに与えた質問文。
+        answer: モデルの回答文。
+        name: 拡張子を除いた保存名。ディレクトリは含めない。
+        expected: 正解。JSONに保存できる値を指定する。
+        condition: 実験条件を表す、JSONに保存できる辞書。
+        directory: 保存先ディレクトリ。存在しなければ作成する。
+        max_new_tokens: 回答生成に使用した最大トークン数。
+
+    Returns:
+        保存したJSONファイルのPath。
+
+    Notes:
+        同名のPNGまたはJSONがある場合は警告を表示し、両方を上書きする。
+    """
     import transformers
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=True)
@@ -81,7 +100,7 @@ def save_observation(vlm, image, question, answer, *, name, expected, condition,
     image_path = directory / f'{name}.png'
     record_path = directory / f'{name}.json'
     if image_path.exists() or record_path.exists():
-        raise FileExistsError(f'{name} は保存済みです。別のnameを指定してください。')
+        print(f'警告: {name} は保存済みです。画像と記録を上書きします。', flush=True)
     image.save(image_path)
     record = dict(model=vlm.model_id, revision=vlm.revision, question=question, answer=answer,
                   expected=expected, condition=condition, image=image_path.name,

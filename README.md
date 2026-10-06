@@ -32,7 +32,7 @@ Notebook同士は別のカーネルでも動きます。
 
 ## Day 2の順番
 
-Day 2は共通実習とチーム課題の着手まで進めます。発表・レポートはDay 3・4で行います。
+Day 2は01〜04の共通実習を進めます。最終発表・レポートはDay 3・4で行います。
 CIFAR-10の学習とVLMの実行にはColabのGPUを推奨します。
 
 | Notebook | 内容 |
@@ -41,7 +41,6 @@ CIFAR-10の学習とVLMの実行にはColabのGPUを推奨します。
 | [02 敵対的入力](notebooks/day2/02-adversarial-attack.ipynb) | FGSM、I-FGSM、攻撃強度・反復回数、ランダムノイズとの比較 |
 | [03 学習済み分類器](notebooks/day2/03-pretrained-attack.ipynb) | ImageNet学習済みモデルへの攻撃 |
 | [04 VLMの入力](notebooks/day2/04-vlm-inputs.ipynb) | 数え上げ、文字の追加、編集画像、実験記録 |
-| [05 チーム課題](notebooks/day2/05-team-project.ipynb) | モデル選択、仮説、最初の比較実験、発表・レポートの準備 |
 
 01で保存する`models/day2-cifar10.pt`を02で使用します。03・04はそれぞれ学習済みモデルを取得します。
 既存のローカル環境では`python -m pip install -r requirements-local.txt`で依存関係を更新してください。
