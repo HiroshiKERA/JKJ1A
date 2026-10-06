@@ -24,7 +24,6 @@
 | [03 テンソル練習](notebooks/day1/03-tensor-exercises.ipynb) | 小問8問、ヒントと自己確認 | 各自演習 |
 | [04 ReLUと表現力](notebooks/day1/04-relu-functions.ipynb) | 折れ曲がり、三角形の山、折れ線近似 | 実演と操作 |
 | [05 ReLU関数の学習](notebooks/day1/05-relu-learning.ipynb) | ReLUネットワーク、損失・勾配・学習過程の観察 | 実演と実験 |
-| [06 最終課題](notebooks/day1/06-assignment.ipynb) | 多層モデルの設計・学習・複雑な関数の実験 | 各自実験 |
 
 Notebook内の案内に従い、**カーネルを再起動したら先頭から実行**します。
 Notebook同士は別のカーネルでも動きます。
@@ -45,6 +44,13 @@ CIFAR-10の学習とVLMの実行にはColabのGPUを推奨します。
 01で保存する`models/day2-cifar10.pt`を02で使用します。03・04はそれぞれ学習済みモデルを取得します。
 既存のローカル環境では`python -m pip install -r requirements-local.txt`で依存関係を更新してください。
 Colabですでにセットアップ済みのセッションは、ランタイムを再起動して先頭から実行してください。
+
+## 最終課題
+
+- [Day 1 発展課題](notebooks/day1/day1-final.ipynb)：多層モデルの設計・学習と，学習ダイナミクスの観察。参考文献・解説付き。
+- [Day 2 発展課題](notebooks/day2/day2-final.ipynb)：モデルが失敗する条件の調査・実験。参考文献・調査のヒント付き。
+
+共通実習の後，最終発表・レポートに向けて班ごとに取り組みます。
 
 ## 旧教材
 
