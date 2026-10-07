@@ -12,8 +12,6 @@ dog.jpg: PyTorch Hubのサンプル画像（既存教材からコピー）。
 https://github.com/pytorch/hub/blob/master/images/dog.jpg
 
 追加画像（2026-10-06）
-dog-cat.png: dog.jpgを元に画像生成ツールで編集し、体に大きくCATを追加。
-文字以外の画素も再生成されているため、厳密な文字のみの変更ではない。
 
 vlmbias-deer.png:
 An Vo et al., Vision Language Models are Biased (arXiv:2505.23941).
@@ -33,7 +31,3 @@ revision: 3761f9fd7163577534a7816c8bc1004035f2e2a0
 Hugging Face Dataset Viewerの提供するJPEGを取得。再生成・加工なし。
 MIT License（データセットのREADMEに明記）。VLMBIAS-LICENSE.txtを参照。
 既存の変更画像と同じ場面だが、配布画像の解像度・圧縮形式は異なる。
-
-vlmbias-deer-dog-note.png: vlmbias-deer-original.jpgを画像生成ツールで編集（2026-10-06）。
-胴体に黄色い付箋風の紙と黒い小文字dogを追加。通常版（足4本）を使用。
-生成編集のため、付箋以外にも画素の変化がある。元画像の出典・ライセンスは上記を参照。
