@@ -41,8 +41,9 @@ class CIFARClassifier(nn.Module):
 def load_cifar10(*, batch_size=128, train_size=None, test_size=None, seed=0):
     from torchvision.datasets import CIFAR10
     from torchvision.transforms import ToTensor
-    # Colab's local disk avoids repeatedly reading small files over Drive.
-    root = '/content/jkj1a-data' if Path('/content').is_dir() else 'data'
+    # Notebook setup changes the working directory to the project root.
+    # Use the same data folder locally and on Colab (Google Drive).
+    root = 'data'
     datasets = [CIFAR10(root, train=train, download=True, transform=ToTensor())
                 for train in (True, False)]
     loaders = []
